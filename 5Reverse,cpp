@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+	
+    string str, save;
+    cout << "Digite a palavra: ";
+    getline(cin, str);
+    save = str;
+    int tam = str.length();
+
+    for (int i = 0; i < tam / 2; i++) {
+        char temp = str[i];
+        str[i] = str[tam - 1 - i];
+        str[tam - 1 - i] = temp;
+    }
+
+    std::cout << "Palavra digitada: " << save << endl;
+    std::cout << "Palavra invertida: " << str << endl;
+
+	return 0;
+}
